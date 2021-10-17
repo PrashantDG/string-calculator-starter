@@ -6,6 +6,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class StringCalculatorShould {
     private StringCalculator calculator;
+    
+     @Rule
+    public ExpectedException thrown = ExpectedException.none();
 
 
     @Test
