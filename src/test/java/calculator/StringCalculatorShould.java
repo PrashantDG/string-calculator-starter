@@ -9,6 +9,11 @@ class StringCalculatorShould {
     
      @Rule
     public ExpectedException thrown = ExpectedException.none();
+    
+    @Before
+    public void initialize() {
+        calculator = new StringCalculator();
+    }
 
 
     @Test
