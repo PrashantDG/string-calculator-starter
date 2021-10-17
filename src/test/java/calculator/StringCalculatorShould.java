@@ -5,14 +5,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class StringCalculatorShould {
-    private StringCalculator calculator;
+    private StringCalculator stringCalculator;
     
      @Rule
     public ExpectedException thrown = ExpectedException.none();
     
     @Before
     public void initialize() {
-        calculator = new StringCalculator();
+        stringCalculator = new StringCalculator();
     }
 
 
@@ -26,5 +26,11 @@ class StringCalculatorShould {
     void string_with_single_number_should_return_number_as_int() {
         StringCalculator stringCalculator = new StringCalculator();
         assertEquals(1, stringCalculator.add("1"));
+    }
+    
+      @Test
+    public void numbersCommaDelimitedShouldBeSummed() {
+        assertEquals(calculator.add("1,2"), 3);
+        assertEquals(25, stringCalculator.add("10,15"));
     }
 }
