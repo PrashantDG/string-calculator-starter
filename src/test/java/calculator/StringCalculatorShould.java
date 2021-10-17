@@ -45,5 +45,13 @@ class StringCalculatorShould {
         assertEquals(stringCalculator.add("1,2,3"), 6);
         assertEquals(stringCalculator.add("5\n2\n3"), 10);
     }
+    
+     @Test
+    public void negativeInputReturnsException() {
+        thrown.expect(IllegalArgumentException.class);
+        thrown.expectMessage("Negative input!");
+        stringCalculator.add("-1");
+        stringCalculator.add("-5,10\n-15");
+    }
 
 }
